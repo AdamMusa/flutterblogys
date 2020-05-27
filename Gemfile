@@ -8,6 +8,10 @@ source "https://rubygems.org"
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
 gem "jekyll", "~> 4.0.1"
+
+gem 'rack-jekyll', '~> 0.5.0'
+gem 'rake', '~> 13.0', '>= 13.0.1'
+gem 'puma', '~> 4.3', '>= 4.3.5'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
