@@ -9,6 +9,8 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.0.1"
 
+ruby "2.6.3"
+
 gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 13.0', '>= 13.0.1'
 gem 'puma', '~> 4.3', '>= 4.3.5'

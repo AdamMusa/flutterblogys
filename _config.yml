@@ -35,8 +35,6 @@ theme: minima
 plugins:
   - jekyll-feed
 
-require 'rack/jekyll' require 'yaml'
-run Rack::Jekyll.new
 
 # Exclude from processing.
 # The following items will not be processed, by default.
