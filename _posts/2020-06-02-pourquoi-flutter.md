@@ -31,7 +31,7 @@ Les applications Flutter respectent les conventions de la plateforme et les dét
 
 **4. Recharge à chaud**<br>
 
-Dans Flutter, vous pouvez changer l’état de votre application en un clique communement appellé haut reload , comme vous les faites sur le Web, appuyez simplement sur une actualisation et vos codes sont également actualisés.
+Dans Flutter, vous pouvez changer l’état de votre application en un clique communement appellé hot reload , comme vous les faites sur le Web, appuyez simplement sur une actualisation et vos codes sont également actualisés.
 
 ![alt text](/assets/images/hot-reload.gif)
 
@@ -43,7 +43,7 @@ Flutter ne nécessite pas de pont Javascript et la vitesse est beaucoup plus rap
 **6. Utiliser Dart comme un langage de programmation**<br>
 Flutter est écrit en Dart et qui contribue à l’efficacité du flux de développement d’applications. Dart est un langage très simple à apprendre en main avec une syntaxe simple cool.
 
-**7. Respect la fidélité de l’interface utilisateur**<br>
+**7. Respecte la fidélité de l’interface utilisateur**<br>
 
 Lorsque vous utilisez Flutter, vous pouvez obtenir une expérience IOS complète ou une expérience Android. 
 
