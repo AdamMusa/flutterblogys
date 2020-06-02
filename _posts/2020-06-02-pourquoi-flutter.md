@@ -5,7 +5,7 @@ date:   2020-06-2 3:00:03 +0100
 categories: jekyll update
 ---
 
-
+![alt text]["assets/images/flutter.png"]
 De nos jours, les utilisateurs de mobiles s’attendent à ce que leurs applications aient un design magnifique, des animations fluides et des performances exceptionnelles. Les développeurs doivent créer une nouvelle fonctionnalité plus rapidement que jamais, sans compromettre la qualité ni les performances. C’est pourquoi Google a lancé flutter . 
 Qu’est-ce que Flutter?
 Flutter est un framework d’interface utilisateur mobile, gratuit et a code ouvert (open source) qui offre aux développeurs un moyen rapide et expressif de créer des applications web, desktop et mobile(iOS et Android natives) à partir d’une base de code unique . Flutter est sorti en mai 2017. Il a été écrit en utilisant le moteur graphique C, C ++, Dart et Skia. Flutter est un framework Dart, et Dart est un langage de programmation orienté objet écrit par Google. Flutter est le seul framework avec SDK mobile qui fournit des styles réactifs sans passer par un pont Javascript.
