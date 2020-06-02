@@ -19,7 +19,7 @@ Flutter est un framework d’interface utilisateur mobile, gratuit et a code ouv
 
 **1- Développement rapide**<br>
 
-Flutter est conçu pour une vitesse de développement phenominaleLe rechargement à chaud communément appelé haut reaload avec état vous permet de changer votre code et de le voir prendre vie en moins d’une seconde sans perdre l’état de l’application. Flutter est également livré avec un paquet de widgets, très riches et personnalisables, tout construits à partir d’un framework réactif et modern
+Flutter est conçu pour une vitesse de développement phenominale.Le rechargement à chaud communément appelé haut reaload avec état vous permet de changer votre code et de le voir prendre vie en moins d’une seconde sans perdre l’état de l’application. Flutter est également livré avec un paquet de widgets, très riches et personnalisables, tout construits à partir d’un framework réactif et modern
 
 **2. Interface utilisateur Expressive + Flexible**<br>
 
@@ -41,7 +41,7 @@ Flutter ne nécessite pas de pont Javascript et la vitesse est beaucoup plus rap
 
 
 **6. Utiliser Dart comme un langage de programmation**<br>
-Flutter est écrit en Dart et qui contribue à l’efficacité du flux de développement d’applications. Dart est un langage très simple à apprendre en main avec une syntaxe simple cool.
+Flutter est écrit en Dart et qui contribue à l’efficacité du flux de développement d’applications. Dart est un langage très simple à prendre en main avec une syntaxe simple cool.
 
 **7. Respecte la fidélité de l’interface utilisateur**<br>
 
@@ -49,6 +49,6 @@ Lorsque vous utilisez Flutter, vous pouvez obtenir une expérience IOS complète
 
 **9. Le kit de widgets personnalisable**<br>
 
-Flutter utilise material design par défaut pour créer une très jolie et puissante l'interface utilisateur expressive écrire en flutter revient à indiquer un chemin pour Monsieur x car c'est trop verbal
+Flutter utilise material design par défaut pour créer une très jolie et puissante interface utilisateur expressive écrire en flutter revient à indiquer un chemin pour Monsieur x car c'est trop verbal
 
 conclusion :  Flutter est un puissant boit à outils, donc il nous faut apprendre à assembler le puzzle pour faire une magnifique et puissante application multiplate-forme. En plus trop économique pour une entreprise sinon il engagera des développeurs Android & iOS pour réaliser une même application pour deux plateformes différentes
