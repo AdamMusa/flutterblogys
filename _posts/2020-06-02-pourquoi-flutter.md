@@ -29,7 +29,7 @@ Dans Flutter, vous pouvez changer l’état de notre application en une clique e
 **5. Haute performance**<br>
 Flutter ne nécessite pas de pont Javascript et la vitesse est beaucoup plus rapide.
 
-![alt text](/assets/images/hot-reload.gif)
+![alt text](/assets/images/hot-reload.gif)<br>
 **6. Utiliser Dart comme un langage de programmation**<br>
 Flutter est écrit en Dart et qui contribue à l’efficacité du flux de développement d’applications. Dart est un langage très simple à apprendre en main avec une syntaxe simple cool.
 **7. Respect la fidélité de l’interface utilisateur**<br>
