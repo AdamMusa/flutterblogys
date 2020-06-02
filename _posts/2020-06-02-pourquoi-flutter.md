@@ -3,7 +3,6 @@ layout: post
 title:  "Pourquoi Flutter ?"
 date:   2020-06-2 3:00:03 +0100
 author: AdamMusa
-categories: jekyll update
 ---
 ![alt text](/assets/images/account.jpg){: width=50;height:60; style="float:left; padding:16px;border-radius:50%;height:100px;"}
 <br> AdamMusa [Follow](https://twitter.com/AdamMusaAly/)<br>
