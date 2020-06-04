@@ -19,7 +19,7 @@ Flutter est un framework d’interface utilisateur mobile, gratuit et a code ouv
 
 **1- Développement rapide**<br>
 
-Flutter est conçu pour une vitesse de développement phenominale.Le rechargement à chaud communément appelé haut reaload avec état vous permet de changer votre code et de le voir prendre vie en moins d’une seconde sans perdre l’état de l’application. Flutter est également livré avec un paquet de widgets, très riches et personnalisables, tout construits à partir d’un framework réactif et modern
+Flutter est conçu pour une vitesse de développement phenominale.Le rechargement à chaud communément appelé hot reaload avec état vous permet de changer votre code et de le voir prendre vie en moins d’une seconde sans perdre l’état de l’application. Flutter est également livré avec un paquet de widgets, très riches et personnalisables, tout construits à partir d’un framework réactif et modern
 
 **2. Interface utilisateur Expressive + Flexible**<br>
 
