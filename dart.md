@@ -5,7 +5,7 @@ permalink: /tour/langage/dart
 ---
 ![alt text](/assets/images/account.jpg){: width=50;height:60; style="float:left; padding:16px;border-radius:50%;height:100px;"}
 <br> AdamMusa [Follow](https://twitter.com/AdamMusaAly/)<br>
-2,Juin 2020 16min<br><br>
+5,Juin 2020 1min<br><br>
 
 Cette collection n'est pas exhaustive, c'est juste une brève introduction au langage pour les personnes qui aiment apprendre et faire par la suite Flutter par exemple. Ce tour de langage est bénéfique pour une personne qui n'a encore jamais programmé ou au contraire. Mais pour faire flutter il faut avoir minimum de connaissances en Dart, dans ce didacticiel vous allez avoir cette connaissance et vous apprendrez à voler avec flutter.<br>**Si vous souhaitez exécuter le code, cliquer sur le DartPad ci-haut et coller le code que vous avez copié et clique sur Run ça va exécuter votre code**.
 Commençons par un hello world.
