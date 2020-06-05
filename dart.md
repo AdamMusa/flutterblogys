@@ -3,8 +3,11 @@ layout: post
 title: Dart
 permalink: /tour/langage/dart
 ---
+![alt text](/assets/images/account.jpg){: width=50;height:60; style="float:left; padding:16px;border-radius:50%;height:100px;"}
+<br> AdamMusa [Follow](https://twitter.com/AdamMusaAly/)<br>
+2,Juin 2020 16min<br><br>
 
-Cette collection n'est pas exhaustive, c'est juste une brève introduction au langage pour les personnes qui aiment apprendre et faire par la suite Flutter par exemple. Ce tour de langage est bénéfique pour une personne qui n'a encore jamais programmé ou au contraire. Mais pour faire flutter il faut avoir minimum de connaissances en Dart, dans ce didacticiel vous allez avoir cette connaissance et vous apprendrez à voler avec flutter.
+Cette collection n'est pas exhaustive, c'est juste une brève introduction au langage pour les personnes qui aiment apprendre et faire par la suite Flutter par exemple. Ce tour de langage est bénéfique pour une personne qui n'a encore jamais programmé ou au contraire. Mais pour faire flutter il faut avoir minimum de connaissances en Dart, dans ce didacticiel vous allez avoir cette connaissance et vous apprendrez à voler avec flutter.<br>**Si vous souhaitez exécuter le code, cliquer sur le DartPad ci-haut et coller le code que vous avez copié et clique sur Run ça va exécuter votre code**.
 Commençons par un hello world.
 
 {% highlight dart %}
@@ -36,6 +39,21 @@ final nom = "Flash";
 {% endhighlight %}
 Les mots clés final et const sont utilisés pour déclarer des constantes. Dart empêche de modifier les valeurs d'une variable déclarée à l'aide du mot clé final ou const. Ces mots clés peuvent être utilisés conjointement avec le type de données de la variable ou à la place du mot clé var .
 Le mot clé const est utilisé pour représenter une constante au moment de la compilation. Les variables déclarées à l'aide du mot clé const sont implicitement finales.
+
+**Les Opérateurs et les mots réservés**
+
+Dart prend en charge tous les opérateurs arithmétiques. Voici quelques-uns:
+
+Opérateur|	La description|	Exemple
+------------ | -------------
+>   |Plus grand que	| (2> 3) est faux
+<	  |Moins que	|(2 < 3 ) est vrai
+> = |	Plus grand ou égal à	|(2> = 3) est faux
+<=	|Inférieur ou égal à	|(2 <= 3) est vrai
+==	|Égalité	|(2 == 3) est faux
+! =	|Inégalité 	| int a =2,int b=3(a! = b) est vrai
+
+[**voir plus les opérateurs et les mots réservés**](https://dart.dev/guides/language/language-tour/)
 
 **Structure conditionnelle**
 
@@ -151,3 +169,195 @@ void main(){
 }
 var result = (a) => a * a;
 {% endhighlight %}
+
+**Quelques methodes que le map et liste qui font en commun**
+
+#| Propriete & Description
+------------ | -------------
+1 |Length, : Renvoie la taille de l'objet
+2 |isEmpty : Renvoie true si l'objet est vide
+3 |isNotEmpty : Renvoie true si l'objet n'est pas vide
+4 |add : Permets d'ajouter un element dans l'objet
+5 |removeAt : Permets de supprimer un element à partir de son index
+6 |clear : Permets de supprimer l'objet
+
+**ex :**
+{% highlight dart %}
+void main() {
+  List<dynamic> list = ['apples', 'bananas', 'oranges'];
+  list.add(2);
+  print(list);
+  list.removeAt(0);
+  print(list);
+  print(list.length);
+  print(list.isEmpty);
+  print(list.isNotEmpty);
+  list.clear();
+  print(list);
+}
+{% endhighlight %}
+
+**Importations**
+
+Se font de la maniere suivante :
+{% highlight dart %}
+  //Importation d'une bibliothèques
+  import 'dart:math';
+  //Importation de bibliothèques à partir de packages externes
+  import 'package:test/test.dart';
+  //Importation de fichiers
+  import 'chemin/de/la/fichier.dart';
+{% endhighlight %}
+**Des classes(POO)**
+
+Dans la POO, une classe agit comme un type de données abstrait (TDA) pour une instance de cette classe (objet). En Dart, c'est également le cas. La syntaxe de base d'une classe est:
+{% highlight dart %}
+class NomDeLaClass {
+ champs;
+ getters/setters
+ constructeur
+ methodes/fonctions
+}
+{% endhighlight %}
+**Getter et Setter**
+
+Les getters et setters sont des méthodes spéciales qui fournissent un accès en lecture et en écriture aux propriétés d'un objet. Chaque variable d'instance de votre classe a un getter implicite et un setter si nécessaire. Dans Dart, vous pouvez aller encore plus loin en implémentant vos propres getters et setters. 
+Commençons.
+{% highlight dart %}
+void main() {
+ Vehicle car = Vehicle(marque:"Honda",model:"Civic",annee:2018,    couleur:"red");
+ print(car.map); // output - {marque: Honda, model: Civic, annee: 2018, couleur: red}
+}
+class Vehicle {
+  String marque;
+  String model;
+  int annee;
+  int vehicleAge;
+  String couleur;
+  Map<String,dynamic> get map {
+    return {
+      "marque": marque,
+      "model": model,
+      "annee":annee,
+      "couleur": couleur,
+    };
+  }
+
+  int get age {
+    return DateTime.now().year - annee;
+  }
+
+  void set age(int anneecourant) {
+    vehicleAge = anneecourant - annee;
+  }
+
+  Vehicle({this.marque,this.model,this.annee,this.couleur,});
+}
+{% endhighlight %}
+
+**Héritage**
+
+Dart a un héritage unique.
+
+**ex:**
+{% highlight dart %}
+class Employee extends Spacecraft {
+  double salaire;
+  Employee(String nom, String prenom, this.salaire)
+      : super(nom, prenom);
+}
+{% endhighlight %}
+
+**Mixins**
+
+Les mixins sont un moyen de réutiliser du code dans plusieurs hiérarchies de classes. La classe suivante peut agir comme un mixage:
+
+{% highlight dart %}
+class Pilote {
+  int astronaute = 1;
+  void description() {
+    print('Nombre d'astronautes: $astronaute');
+  }
+}
+{% endhighlight %}
+
+Pour ajouter les capacités d'un mixin à une classe, étendez simplement la classe avec le mixin.
+{% highlight dart %}
+class Employee extends Person with Pilote{
+  // ···
+}
+{% endhighlight %}
+
+**Interfaces et classes abstraites**
+
+Dart n'a pas de interface comme mot clé. Au lieu de cela, toutes les classes définissent implicitement une interface. Par conséquent, vous pouvez implémenter n'importe quelle classe
+{% highlight dart %}
+class Employee implements Pilote {
+  // ···
+}
+{% endhighlight %}
+
+Vous pouvez créer une classe abstraite à étendre (ou implémenter) par une classe concrète. Les classes abstraites peuvent contenir des méthodes abstraites (avec des corps vides).
+{% highlight dart %}
+abstract class Description {
+  void descrire();
+
+  void descrire() {
+    print('=========');
+    descrire();
+    print('=========');
+  }
+}
+{% endhighlight %}
+
+**Async**
+
+Évitez l'enfer de rappel et rendez votre code beaucoup plus lisible en utilisant async et await.
+{% highlight dart %}
+const uneSeconde = Duration(seconds: 1);
+// ···
+Future<void> fonctionasync(String message) async {
+  await Future.delayed(uneSeconde);
+  print(message);
+}
+{% endhighlight %}
+
+La méthode ci-dessus équivaut à:
+{% highlight dart %}
+const uneSeconde = Duration(seconds: 1);
+// ···
+Future<void> fonctionasync(String message) {
+  return Future.delayed(uneSeconde).then((_) {
+    print(message);
+  });
+}
+
+{% endhighlight %}
+
+**Exceptions**
+
+Pour déclencher une exception, utilisez throw
+{% highlight dart %}
+if (astronaute == 0) {
+  throw StateError("N'est pas un astronaute.");
+}
+{% endhighlight %}
+Pour intercepter une exception, utilisez une try instruction avec on ou catch(ou les deux):
+{% highlight dart %}
+main() { 
+   int x = 12; 
+   int y = 0; 
+   int res;  
+   
+   try { 
+      res = x ~/ y; 
+   }  
+   on IntegerDivisionByZeroException catch(e) { 
+      print(e); //on affiche l'exception
+   } 
+} 
+{% endhighlight %}
+
+**Conclusion:**
+
+Bravo !!!, vous disposez déjà la base nécessaire pour ne pas se perdre en flutter bien qu'on a brossé le tour de Dart mais si vous souhaitez approfondir votre base en Dart [**clique ici**](https://dart.dev/guides/language/language-tour/)
