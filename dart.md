@@ -53,7 +53,8 @@ else{
 {% endhighlight %}
 
 **Les boucles**
-Les boucles sont utilisées pour parcourir les element d'un table,d'une collection ou dictionnaire dans certains langage ou des objects dans d'autres. Voila comment on les utilisent:
+
+Les boucles sont utilisées pour parcourir les éléments d'une table, d'une collection ou dictionnaire dans certains langages ou des objets dans d'autres. Voilà comment on les utilise:
 La boucle for :
 {% highlight dart %}
 void main() {
@@ -63,13 +64,14 @@ void main() {
   }
 }
 {% endhighlight %}
-**List**
-une List est un table  et on peut recuperer un element de la sort
+
+Une liste est une table et on peut récupérer un élément de la sorte
 {% highlight dart %}
-List a = [1,2,3] #Une list homogene;
+List a = [1,2,3] //Une list homogène;
 print(a[0]);
 {% endhighlight %}
-L'index de la liste commence de 0 à n-1
+L'index de la liste commence de 0 à n-1.
+
 La boucle while :
 {% highlight dart %}
 void main() {
@@ -81,9 +83,9 @@ void main() {
   }
 }
 {% endhighlight %}
-exemple d'une List heterogene:
+exemple d'une liste hétérogène:
 {% highlight dart %}
-  dynamic a = [1,"adam",2.5] #Une list heterogene;
+  dynamic a = [1,"adam",3.14] //Une list hétérogène;
   print(a[0]);
 {% endhighlight %}
 
@@ -102,7 +104,7 @@ void main()
 }
 {% endhighlight %}
 
-pour acceder a la valeur de i on procede de la maniere suivant ${i} ou $i,le deux syntaxe sont valides.
+Pour accéder à la valeur d'i ont procede de la manière suivante i} ou $i, les deux syntaxes sont valides.
 
 forEach
 {% highlight dart %}
@@ -113,4 +115,15 @@ void main() {
   });
 }
 {% endhighlight %}
-forEach est un iterateur
+forEach est un itérateur.
+
+**Map ou Collection**
+
+L'objet Map est une simple paire clé / valeur. Les clés et les valeurs d'une map peuvent être de tout type. Une map est une collection dynamique. En d'autres termes, Maps peut augmenter et diminuer au moment de l'exécution.
+{% highlight dart %}
+  void main() { 
+    var usrMap = {"name": "adam", 'Email': 'adammusa2222@gmail.com'};
+    print(usrMap["name"]); 
+    usrMap.forEach((k,v) => print('${k}: ${v}')); 
+  } 
+{% endhighlight %}
