@@ -104,12 +104,12 @@ void main()
 }
 {% endhighlight %}
 
-Pour accéder à la valeur d'i ont procede de la manière suivante i} ou $i, les deux syntaxes sont valides.
+Pour accéder à la valeur de i ont procede de la manière suivante ${ i } ou $i, les deux syntaxes sont valides.
 
 forEach
 {% highlight dart %}
 void main() {
-  var list = ['apples', 'bananas', 'oranges'];
+  var list = ['apples', 'bananas', 'oranges'];/* équivaut à faire ça List<String> list =  ['apples', 'bananas', 'oranges'];*/
   list.forEach((item) {
     print('${list.indexOf(item)}: $item');
   });
@@ -122,8 +122,32 @@ forEach est un itérateur.
 L'objet Map est une simple paire clé / valeur. Les clés et les valeurs d'une map peuvent être de tout type. Une map est une collection dynamique. En d'autres termes, Maps peut augmenter et diminuer au moment de l'exécution.
 {% highlight dart %}
   void main() { 
-    var usrMap = {"name": "adam", 'Email': 'adammusa2222@gmail.com'};
-    print(usrMap["name"]); 
-    usrMap.forEach((k,v) => print('${k}: ${v}')); 
+    var infoUser= {"name": "adam", 'Email': 'adammusa2222@gmail.com'};
+    print(infoUser["name"]); 
+    infoUser.forEach((k,v) => print('${k}: ${v}')); 
   } 
+{% endhighlight %}
+
+**Les fonctions**
+
+Il est recommandé de spécifier les types d'arguments de chaque fonction et la valeur de retour.
+Nous allons implementer une suite de fibonacci.
+{% highlight dart %}
+void main(){
+  var result = fibonacci(20);
+  print(result);
+}
+int fibonacci(int n) {
+  if (n == 0 || n == 1) return n;
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+{% endhighlight %}
+
+**Fat Arrow Expression ou Lambda Function Expression ou arrow function** est une syntaxe pour écrire une fonction sur une seule ligne en utilisant la =>syntaxe AKA fat arrow. Cela ressemble à la syntaxe de la fonction ES6 Fat Arrow de JavaScript. Il s'agit d'une façon plus propre d'écrire des fonctions avec une seule instruction.
+
+{% highlight dart %}
+void main(){
+  print(result(20));
+}
+var result = (a) => a * a;
 {% endhighlight %}

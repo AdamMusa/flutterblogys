@@ -41,7 +41,7 @@ Flutter ne nécessite pas de pont Javascript et la vitesse est beaucoup plus rap
 
 
 **6. Utiliser Dart comme un langage de programmation**<br>
-Flutter est écrit en Dart et qui contribue à l’efficacité du flux de développement d’applications. Dart est un langage très simple à prendre en main avec une syntaxe simple cool.
+Flutter est écrit en Dart et qui contribue à l’efficacité du flux de développement d’applications. Dart est un langage très simple à prendre en main avec une syntaxe simple et cool.
 
 **7. Respecte la fidélité de l’interface utilisateur**<br>
 
