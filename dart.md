@@ -33,7 +33,7 @@ int age = 23;
 Si vous voulez déclaration une variable de façon implicite utiliser var sinon utiliser le type de cette variable(si c'est un entier on utilise int,chaine de caractere String).
 Comme nom est une constante on peut faire aussi comme ça 
 {% highlight dart %}
-var const nom = 'Flash';
+const nom = 'Flash';
 ou
 final nom = "Flash";
 {% endhighlight %}
