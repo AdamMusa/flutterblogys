@@ -15,15 +15,6 @@ gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 13.0', '>= 13.0.1'
 gem 'puma', '~> 4.3', '>= 4.3.5'
 
-
-defaults:
--
-  scope:
-    path:
-      values:
-        sitemap: true
-
-
 #Sitemap in my blog
 gem 'jekyll-sitemap'
 
