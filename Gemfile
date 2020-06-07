@@ -17,11 +17,11 @@ gem 'puma', '~> 4.3', '>= 4.3.5'
 
 
 defaults:
-  -
-    scope:
-      path:
-    values:
-      sitemap: true
+-
+  scope:
+    path:
+      values:
+        sitemap: true
 
 
 #Sitemap in my blog
