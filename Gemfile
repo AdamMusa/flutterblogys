@@ -15,9 +15,6 @@ gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 13.0', '>= 13.0.1'
 gem 'puma', '~> 4.3', '>= 4.3.5'
 
-#Sitemap in my blog
-gem 'jekyll-sitemap'
-
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
