@@ -52,4 +52,4 @@ Lorsque vous utilisez Flutter, vous pouvez obtenir une expérience IOS complète
 
 Flutter utilise material design par défaut pour créer une très jolie et puissante interface utilisateur expressive écrire en flutter revient à indiquer un chemin pour Monsieur x car c'est trop verbal
 
-conclusion :  Flutter est un puissant boit à outils, donc il nous faut apprendre à assembler le puzzle pour faire une magnifique et puissante application multiplate-forme. En plus trop économique pour une entreprise sinon il engagera des développeurs Android & iOS pour réaliser une même application pour deux plateformes différentes
+**Conclusion** :  Flutter est un puissant boit à outils, donc il nous faut apprendre à assembler le puzzle pour faire une magnifique et puissante application multiplate-forme. En plus trop économique pour une entreprise sinon il engagera des développeurs Android & iOS pour réaliser une même application pour deux plateformes différentes

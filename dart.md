@@ -85,7 +85,7 @@ void main() {
 
 Une liste est une table et on peut récupérer un élément de la sorte
 {% highlight dart %}
-List a = [1,2,3] //Une list homogène;
+List a = [1,2,3]; //Une list homogène;
 print(a[0]);
 {% endhighlight %}
 L'index de la liste commence de 0 à n-1.
@@ -103,7 +103,7 @@ void main() {
 {% endhighlight %}
 exemple d'une liste hétérogène:
 {% highlight dart %}
-  dynamic a = [1,"adam",3.14] //Une list hétérogène;
+  dynamic a = [1,"adam",3.14]; //Une list hétérogène;
   print(a[0]);
 {% endhighlight %}
 
@@ -112,8 +112,8 @@ La boucle do while :
 {% highlight dart %}
 void main()
 {
-    var i =1;
-    var max =5;
+    var i = 1;
+    var max = 5;
     print("MindDev - Dart do while loop");
     do{      
         print("Hello World! Value is :${i}");  
@@ -360,4 +360,4 @@ main() {
 
 **Conclusion:**
 
-Bravo !!!, vous disposez déjà la base nécessaire pour ne pas se perdre en flutter bien qu'on a brossé le tour de Dart mais si vous souhaitez approfondir votre base en Dart [**clique ici**](https://dart.dev/guides/language/language-tour/)
+**Bravo !!!**, vous disposez déjà la base nécessaire pour ne pas se perdre en flutter bien qu'on a brossé le tour de Dart mais si vous souhaitez approfondir votre base en Dart [**clique ici**](https://dart.dev/guides/language/language-tour/)
