@@ -19,7 +19,7 @@
 # in the templates via {{ site.myvariable }}.
 
 comments: true
-title: CodeBrute
+title: Codebrute
 iconURL: assets/default-icon.png
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
