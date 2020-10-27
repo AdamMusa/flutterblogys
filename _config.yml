@@ -22,12 +22,11 @@ comments: true
 title: Codebrute
 iconURL: assets/default-icon.png
 email: adammusa2222@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  Apprendre à voler en Flutter avec moi...
+description: "Flutter Evangelist💙Dart gives me wings💙Creator of codebrute💙Public Speaker💙Web and Flutter developper"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://flutterblogys.herokuapp.com" # the base hostname & protocol for your site, e.g. http://example.com
-twitter_username: jekyllrb
-github_username:  jekyll
+twitter_username: AdamMusaAly
+github_username:  AdamMusa
 
 # Build settings
 theme: minima
