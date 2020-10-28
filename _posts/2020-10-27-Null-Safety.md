@@ -70,8 +70,8 @@ class IntProvider {
 
 **Le late mot-clé a deux effets:**
 
-L'analyseur ne vous oblige pas à initialiser immédiatement une latevariable à une valeur non nulle.
-Le runtime initialise paresseusement la latevariable. Par exemple, si une variable d'instance non Nullable doit être calculée, l'ajout du latemodificateur retarde le calcul jusqu'à la première utilisation de la variable d'instance.
+L'analyseur ne vous oblige pas à initialiser immédiatement une late variable à une valeur non nulle.
+Le runtime initialise paresseusement la late variable. Par exemple, si une variable d'instance non Nullable doit être calculée, l'ajout du late modificateur retarde le calcul jusqu'à la première utilisation de la variable d'instance.
 
 **Utiliser des variables et des expressions**
 
