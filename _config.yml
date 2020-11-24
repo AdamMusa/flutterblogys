@@ -8,7 +8,7 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you: 
+# If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
 #
@@ -24,16 +24,14 @@ iconURL: assets/default-icon.png
 email: adammusa2222@gmail.com
 description: "Flutter Evangelist💙Dart gives me wings💙Creator of codebrute💙Public Speaker💙Web and Flutter developper"
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://flutterblogys.herokuapp.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.thecodebrute.com" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AdamMusaAly
-github_username:  AdamMusa
+github_username: AdamMusa
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
