@@ -9,7 +9,7 @@ source "https://rubygems.org"
 # Happy Jekylling!
 gem "jekyll", "~> 4.0.1"
 
-ruby "2.6.3"
+ruby "2.7.0"
 
 gem 'rack-jekyll', '~> 0.5.0'
 gem 'rake', '~> 13.0', '>= 13.0.1'
