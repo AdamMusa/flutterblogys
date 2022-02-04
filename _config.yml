@@ -23,7 +23,7 @@ title: thecodebrute
 iconURL: assets/default-icon.png
 email: adammusa2222@gmail.com
 description: "Flutter Evangelist💙Dart gives me wings💙Creator of codebrute💙Public Speaker💙Web and Flutter developper"
-baseurl: "flutterblogys" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 # url: "https://www.thecodebrute.com" # the base hostname & protocol for your site, e.g. http://example.com
 url: "https://adammusa.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: AdamMusaAly

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2485001716954345"
+     crossorigin="anonymous"></script><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Pourquoi Null Safety ? | thecodebrute</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Pourquoi Null Safety ?" />
+<meta name="author" content="AdamMusa" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="AdamMusa Follow 2,Juin 2020 16min" />
+<meta property="og:description" content="AdamMusa Follow 2,Juin 2020 16min" />
+<link rel="canonical" href="http://localhost:4000/2020/10/27/Null-Safety.html" />
+<meta property="og:url" content="http://localhost:4000/2020/10/27/Null-Safety.html" />
+<meta property="og:site_name" content="thecodebrute" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-10-27T23:20:03+01:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Pourquoi Null Safety ?" />
+<script type="application/ld+json">
+{"datePublished":"2020-10-27T23:20:03+01:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/2020/10/27/Null-Safety.html"},"url":"http://localhost:4000/2020/10/27/Null-Safety.html","author":{"@type":"Person","name":"AdamMusa"},"@type":"BlogPosting","headline":"Pourquoi Null Safety ?","dateModified":"2020-10-27T23:20:03+01:00","description":"AdamMusa Follow 2,Juin 2020 16min","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="thecodebrute" /></head>
+<body><header class="site-header"><a class="site-title" rel="author" href="/">thecodebrute</a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+            <a class="page-link" href="/about/">
+              About
+            </a>
+            <a class="page-link" href="/tour/langage/dart">
+              Dart
+            </a>
+            <a class="page-link" href="/test/dartpad">
+              DartPad
+            </a></div>
+    </nav><div class="site-icon">
+    <img src="/assets/default-icon.png" />
+  </div>
+
+</header><main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Pourquoi Null Safety ?</h1>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/assets/images/dart.png" alt="alt text" style="float:left; padding:16px;border-radius:50%;height:100px;" />
+<br /> AdamMusa <a href="https://twitter.com/AdamMusaAly/">Follow</a><br />
+2,Juin 2020 16min</p>
+
+<p>Dart est un langage de type sécurisé. Cela signifie que lorsque vous obtenez une variable d’un certain type, le compilateur peut garantir qu’elle est de ce type. Mais la sécurité de type en soi ne garantit pas que la variable ne l’est pas null.
+Les erreurs nulles sont très courantes. Une recherche sur GitHub conduit à des milliers de problèmes causés par des valeurs nulles dans le code Dart, et encore plus de milliers de commits essayant de résoudre ces problèmes.
+Essayez de voir si vous pouvez repérer les problèmes de nullabilité dans l’exemple de code suivant:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart">  <span class="kt">void</span> <span class="nf">printLengths</span><span class="p">(</span><span class="kt">List</span><span class="o">&lt;</span><span class="n">File</span><span class="o">&gt;</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kd">var</span> <span class="n">file</span> <span class="k">in</span> <span class="n">files</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="n">file</span><span class="o">.</span><span class="na">lengthSync</span><span class="o">());</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Cette fonction échouera certainement si elle est appelée avec null, mais il y a un deuxième cas à considérer:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// Error case 1: passing a null to files.</span>
+  <span class="n">printLengths</span><span class="o">(</span><span class="kc">null</span><span class="o">);</span>
+  <span class="c1">// Error case 2: passing list of files, containing a null item.</span>
+  <span class="n">printLengths</span><span class="o">([</span><span class="n">File</span><span class="o">(</span><span class="s">'filename1'</span><span class="o">),</span> <span class="n">File</span><span class="o">(</span><span class="s">'filename2'</span><span class="o">),</span> <span class="kc">null</span><span class="o">]);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Sound null safety</strong></p>
+
+<p>Sound null safety de Dart est saine . Cela signifie que Dart est sûr à 100% que la filesliste et les éléments qu’elle contient ne peuvent pas être null dans l’exemple ci-dessus. Lorsque Dart analyse votre code et détermine qu’une variable est non-nullable, cette variable est toujours non-nullable: si vous inspectez votre code en cours d’exécution dans le débogueur, vous verrez que la non-nullability est conservée au moment de l’exécution. En revanche, certaines autres implémentations sont défectueuses et, dans de nombreux cas, doivent encore effectuer des vérifications nulles à l’exécution. Dart partage Null Safety avec Swift, mais pas beaucoup d’autres langages de programmation.
+La solidité de Sound null safety de Dart a une autre implication bienvenue: cela signifie que vos programmes peuvent être plus petits et plus rapides. Parce que Dart est vraiment sûr que ce files n’est jamais le cas null, Dart peut optimiser. Par exemple, le compilateur Dart ahead-of-time (AOT) peut produire du code natif plus petit et plus rapide, car il n’a pas besoin d’ajouter des vérifications pour les valeurs nulles lorsqu’il sait qu’une variable ne l’est pas null.
+Nous avons vu des résultats préliminaires très prometteurs. Par exemple, <strong>l’équipe de Google chargé du projet dart</strong> a constaté une amélioration des performances de 19% dans un microbenchmark qui émule les modèles de rendu typiques du framework Flutter.</p>
+
+<p>Avec Null Safety, vous pouvez raisonner votre code avec plus de confiance. Fini les erreurs de déréférencement nul lors de l’exécution. Au lieu de cela, vous obtenez des erreurs statiques lorsque vous codez.
+Avec  Null Safety, l’analyseur Dart applique les bonnes pratiques. Par exemple, il s’assure que vous vérifiez la valeur NULL avant de lire une variable Nullable. Et parce que la  Null Safety de Dart est saine, les compilateurs et les environnements d’exécution Dart peuvent optimiser les vérifications internes de null, de sorte que les applications peuvent être plus rapides et plus petites.</p>
+
+<p>Les nouveaux opérateurs et mots - clés liés à la sécurité comprennent nulle ?, !et late. Si vous avez utilisé Kotlin, TypeScript ou C#, la syntaxe de la  Null Safety peut vous sembler familière. C’est par conception: le langage Dart se veut sans surprise.
+Vous pouvez essayer la Null Safety dans votre environnement de développement normal en configurant votre projet pour utiliser un SDK d’aperçu technique.</p>
+
+<p><strong>Déclaration de variables avec Null Safety</strong></p>
+
+<p>Si la variable peut avoir la valeur null, ajoutez? à sa déclaration de type:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart">    <span class="kt">int</span><span class="o">?</span> <span class="n">aNullableInt</span> <span class="o">=</span> <span class="kc">null</span><span class="o">;</span></code></pre></figure>
+
+<p>Si vous savez qu’une variable non nullable sera initialisée à une valeur non nulle avant d’être utilisée, mais que l’analyseur Dart n’est pas d’accord, insérez late avant le type de la variable:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">IntProvider</span> <span class="o">{</span>
+  <span class="kd">late</span> <span class="kt">int</span> <span class="n">aRealInt</span><span class="o">;</span>
+  
+  <span class="n">IntProvider</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">aRealInt</span> <span class="o">=</span> <span class="n">calculate</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Le late mot-clé a deux effets:</strong></p>
+
+<p>L’analyseur ne vous oblige pas à initialiser immédiatement une late variable à une valeur non nulle.
+Le runtime initialise paresseusement la late variable. Par exemple, si une variable d’instance non Nullable doit être calculée, l’ajout du late modificateur retarde le calcul jusqu’à la première utilisation de la variable d’instance.</p>
+
+<p><strong>Utiliser des variables et des expressions</strong></p>
+
+<p>Avec la Null Safety, l’analyseur Dart génère des erreurs lorsqu’il trouve une valeur Nullable où une valeur non NULL est requise. Ce n’est pas aussi grave que cela en a l’air: l’analyseur peut souvent reconnaître lorsqu’une variable ou une expression à l’intérieur d’une fonction a un type Nullable mais ne peut pas avoir une valeur Null.</p>
+
+<p>Lorsque vous utilisez une variable ou une expression Nullable, veillez à gérer les valeurs Null. Par exemple, vous pouvez utiliser une if instruction, l’ ??opérateur ou l’ ?.opérateur pour gérer d’éventuelles valeurs nulles.</p>
+
+<p>Voici un exemple d’utilisation de l’ ??opérateur pour éviter de définir une variable non nullable sur null:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">aNullableInt</span> <span class="o">??</span> <span class="mi">0</span><span class="o">;</span> <span class="c1">// 0 if it's null; otherwise, the integer</span></code></pre></figure>
+
+<p><strong>Voici un code similaire, mais avec une if instruction qui vérifie la valeur null:</strong></p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="nf">definitelyInt</span><span class="p">(</span><span class="kt">int</span><span class="o">?</span> <span class="n">aNullableInt</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">aNullableInt</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="k">return</span> <span class="n">aNullableInt</span><span class="o">;</span> <span class="c1">// Can't be null!</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Si vous êtes sûr qu’une expression avec un type Nullable n’est pas NULL, vous pouvez ajouter !pour que Dart la traite comme non Nullable:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">int</span><span class="o">?</span> <span class="n">aNullableInt</span> <span class="o">=</span> <span class="mi">2</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">value</span> <span class="o">=</span> <span class="n">aNullableInt</span><span class="o">!;</span> <span class="c1">// `aNullableInt!` is an int.</span>
+<span class="c1">// This throws if aNullableInt is null.</span></code></pre></figure>
+
+<p>Si vous avez besoin de changer le type d’une variable Nullable - au-delà de ce que l’ !opérateur peut faire - vous pouvez utiliser l’ opérateur de transtypage (as) . L’exemple suivant utilise aspour convertir un num?en un int:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="k">return</span> <span class="nf">maybeNum</span><span class="p">(</span><span class="o">)</span> <span class="k">as</span> <span class="kt">int</span><span class="o">;</span></code></pre></figure>
+
+<p>Une fois que vous avez opté pour la sécurité null, vous ne pouvez pas utiliser l’ opérateur d’accès. aux membres ( ) si l’opérande peut être nul. Au lieu de cela, vous pouvez utiliser la version compatible NULL de cet opérateur ( ?.):</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">double</span><span class="o">?</span> <span class="n">d</span><span class="o">;</span>  
+<span class="n">print</span><span class="o">(</span><span class="n">d</span><span class="o">?.</span><span class="na">floor</span><span class="o">());</span> <span class="c1">// Uses `?.` instead of `.` to invoke `floor()`.</span></code></pre></figure>
+
+<p><strong>Rendre Null Safety plus facile à utiliser</strong></p>
+
+<p>Notez à quel point Dart est assez intelligent pour réaliser qu’au moment où nous transmettons cette if instruction, la loudnessvariable ne peut pas l’ être null. Et donc Dart nous permet d’appeler la clamp()méthode sans sauter à travers les cerceaux. Cette commodité est rendue possible par quelque chose appelé analyse de flux : l’analyseur Dart parcourt votre code comme s’il l’exécutait, trouvant automatiquement des informations supplémentaires sur votre code.
+Voici un autre exemple, qui montre un cas où Dart peut être sûr qu’une variable est non nulle car nous lui affectons toujours une valeur non nulle:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">int</span> <span class="nf">sign</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+  <span class="c1">// The result is non-nullable.</span>
+  <span class="kt">int</span> <span class="n">result</span><span class="o">;</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+  <span class="o">}</span>
+  <span class="c1">// By this point, Dart knows the result cannot be null.</span>
+  <span class="k">return</span> <span class="n">result</span><span class="o">;</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Si vous supprimez l’une des affectations ci-dessus (par exemple, en supprimant la result = -1;ligne), Dart ne peut pas garantir que ce resultsera non nul: vous obtiendrez une erreur statique et votre code ne sera pas compilé.
+L’analyse de flux ne fonctionne qu’à l’intérieur des fonctions. Si vous avez une variable globale ou un champ de classe, Dart ne peut pas garantir à quel moment la valeur lui sera attribuée. Dart ne peut pas modéliser le flux de l’ensemble de votre application. Pour cette raison, vous pouvez utiliser le nouveau late mot-clé lorsque vous savez qu’une variable sera non nulle avant de la lire pour la première fois, mais que vous ne pouvez pas l’initialiser immédiatement.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">Goo</span> <span class="o">{</span>
+  <span class="kd">late</span> <span class="n">Viscosity</span> <span class="n">v</span><span class="o">;</span>
+  <span class="n">Goo</span><span class="o">(</span><span class="n">Material</span> <span class="n">m</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">m</span><span class="o">.</span><span class="na">computeViscosity</span><span class="o">();</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Notez que ce v n’est pas nul, bien qu’il démarre non initialisé. Dart vous fait confiance que vous n’essaierez pas de lire v avant de lui attribuer une valeur non nulle et que votre code se compile sans erreur.</p>
+
+<p><strong>Conclusion :</strong></p>
+
+<p><strong>Bravooo!!!</strong> vous êtes déjà à l’aise avec Null Safety.</p>
+
+<p><strong>Sound null safety</strong> est une caractéristique distinctive de Dart qui vous aide à écrire du code moins sujet aux erreurs et à obtenir de meilleures performances. J’espérons que vous allez expérimenter la fonctionnalité . Meric pour votre temps</p>
+
+  </div>
+
+  <p class="post-meta"><time class="dt-published" datetime="2020-10-27T23:20:03+01:00" itemprop="datePublished">
+        Oct 27, 2020
+      </time>• 
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <span class="p-author h-card" itemprop="name">AdamMusa</span></span></p>
+  
+  <a class="u-url" href="/2020/10/27/Null-Safety.html" hidden></a>
+</article>
+
+
+
+  <div class="comments"> <!--this is to load disqus comments-->
+ <div id="disqus_thread"></div>
+ <script>
+     /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+     /*
+     var disqus_config = function () {
+     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+     */
+     (function () { // DON'T EDIT BELOW THIS LINE
+         var d = document,
+             s = d.createElement('script');
+         s.src = 'https://flutterblogys.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+     })();
+ </script>
+ <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+         Disqus.</a></noscript>
+<script src="https://flutterblogys.disqus.com/embed.js"></script>
+ <!-- this is for count comment with disqus-->
+ <script id="dsq-count-scr" src="//flutterblogys.disqus.com/count.js" async></script>
+  </div>
+
+
+
+
+        </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/"></data>
+
+    <div class="wrapper">
+
+        <div class="footer">
+            <div class="footer-title">2022 &copy; thecodebrute</div>
+
+            <div class="footer-social-links">
+                Vous pouvez me suivre    
+                <a target="_blank" rel="me" href="https://github.com/AdamMusa">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a target="_blank" rel="me" href="https://twitter.com/AdamMusaAly/">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter icon</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+                    </a>
+            </div>
+        </div>
+    </div>
+
+</footer></body>
+
+</html>

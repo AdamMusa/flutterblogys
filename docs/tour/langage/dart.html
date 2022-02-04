@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2485001716954345"
+     crossorigin="anonymous"></script><!-- Begin Jekyll SEO tag v2.7.1 -->
+<title>Dart | thecodebrute</title>
+<meta name="generator" content="Jekyll v4.2.1" />
+<meta property="og:title" content="Dart" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Flutter Evangelist💙Dart gives me wings💙Creator of codebrute💙Public Speaker💙Web and Flutter developper" />
+<meta property="og:description" content="Flutter Evangelist💙Dart gives me wings💙Creator of codebrute💙Public Speaker💙Web and Flutter developper" />
+<link rel="canonical" href="http://localhost:4000/tour/langage/dart" />
+<meta property="og:url" content="http://localhost:4000/tour/langage/dart" />
+<meta property="og:site_name" content="thecodebrute" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Dart" />
+<script type="application/ld+json">
+{"url":"http://localhost:4000/tour/langage/dart","@type":"WebPage","headline":"Dart","description":"Flutter Evangelist💙Dart gives me wings💙Creator of codebrute💙Public Speaker💙Web and Flutter developper","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="thecodebrute" /></head>
+<body><header class="site-header"><a class="site-title" rel="author" href="/">thecodebrute</a><nav class="site-nav">
+      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+      <label for="nav-trigger">
+        <span class="menu-icon">
+          <svg viewBox="0 0 18 15" width="18px" height="15px">
+            <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+          </svg>
+        </span>
+      </label>
+
+      <div class="trigger">
+            <a class="page-link" href="/about/">
+              About
+            </a>
+            <a class="page-link active" href="/tour/langage/dart">
+              Dart
+            </a>
+            <a class="page-link" href="/test/dartpad">
+              DartPad
+            </a></div>
+    </nav><div class="site-icon">
+    <img src="/assets/default-icon.png" />
+  </div>
+
+</header><main class="page-content" aria-label="Content">
+        <div class="wrapper">
+            <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Dart</h1>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p><img src="/assets/images/account.jpg" alt="alt text" style="float:left; padding:16px;border-radius:50%;height:100px;" />
+<br /> AdamMusa <a href="https://twitter.com/AdamMusaAly/">Follow</a><br />
+5,Juin 2020 1min<br /><br /></p>
+
+<p>Cette collection n’est pas exhaustive, c’est juste une brève introduction au langage pour les personnes qui aiment apprendre et faire par la suite Flutter par exemple. Ce tour de langage est bénéfique pour une personne qui n’a encore jamais programmé ou au contraire. Mais pour faire flutter il faut avoir minimum de connaissances en Dart, dans ce didacticiel vous allez avoir cette connaissance et vous apprendrez à voler avec flutter.<br /><strong>Si vous souhaitez exécuter le code, cliquer sur le DartPad ci-haut et coller le code que vous avez copié et clique sur Run ça va exécuter votre code</strong>.
+Commençons par un hello world.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">){</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"hello world"</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Tous nos morceaux de codes que ça soit une fonction ,class etc. doivent être appelé dans la main.</p>
+
+<p><strong>Le variable</strong></p>
+
+<p>Même dans le code Dart , la plupart des variables n’ont pas besoin de types explicites, grâce à l’inférence de type:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">var</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">'Flash'</span><span class="o">;</span>
+<span class="kd">var</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">23</span><span class="o">;</span>
+<span class="n">ou</span> 
+<span class="kt">String</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">'Flash'</span><span class="o">;</span>
+<span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">23</span><span class="o">;</span></code></pre></figure>
+
+<p>Si vous voulez déclaration une variable de façon implicite utiliser var sinon utiliser le type de cette variable(si c’est un entier on utilise int,chaine de caractere String).
+Comme nom est une constante on peut faire aussi comme ça</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">const</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">'Flash'</span><span class="o">;</span>
+<span class="n">ou</span>
+<span class="kd">final</span> <span class="n">nom</span> <span class="o">=</span> <span class="s">"Flash"</span><span class="o">;</span></code></pre></figure>
+
+<p>Les mots clés final et const sont utilisés pour déclarer des constantes. Dart empêche de modifier les valeurs d’une variable déclarée à l’aide du mot clé final ou const. Ces mots clés peuvent être utilisés conjointement avec le type de données de la variable ou à la place du mot clé var .
+Le mot clé const est utilisé pour représenter une constante au moment de la compilation. Les variables déclarées à l’aide du mot clé const sont implicitement finales.</p>
+
+<p><strong>Les Opérateurs et les mots réservés</strong></p>
+
+<p>Dart prend en charge tous les opérateurs arithmétiques. Voici quelques-uns:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Opérateur</th>
+      <th>La description</th>
+      <th>Exemple</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>&gt;</td>
+      <td>Plus grand que</td>
+      <td>(2&gt; 3) est faux</td>
+    </tr>
+    <tr>
+      <td>&lt;</td>
+      <td>Moins que</td>
+      <td>(2 &lt; 3 ) est vrai</td>
+    </tr>
+    <tr>
+      <td>&gt; =</td>
+      <td>Plus grand ou égal à</td>
+      <td>(2&gt; = 3) est faux</td>
+    </tr>
+    <tr>
+      <td>&lt;=</td>
+      <td>Inférieur ou égal à</td>
+      <td>(2 &lt;= 3) est vrai</td>
+    </tr>
+    <tr>
+      <td>==</td>
+      <td>Égalité</td>
+      <td>(2 == 3) est faux</td>
+    </tr>
+    <tr>
+      <td>! =</td>
+      <td>Inégalité</td>
+      <td>int a =2,int b=3(a! = b) est vrai</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><a href="https://dart.dev/guides/language/language-tour/"><strong>voir plus les opérateurs et les mots réservés</strong></a></p>
+
+<p><strong>Structure conditionnelle</strong></p>
+
+<p>Dart prend en charge les instructions de flux de contrôle habituelles:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="k">if</span> <span class="o">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">18</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">print</span><span class="o">(</span><span class="s">'Vous etes majeur'</span><span class="o">);</span>
+<span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">print</span><span class="o">(</span><span class="s">'Vous etes mineur '</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="k">else</span><span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">'Va jouer loin '</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Les boucles</strong></p>
+
+<p>Les boucles sont utilisées pour parcourir les éléments d’une table, d’une collection ou dictionnaire dans certains langages ou des objets dans d’autres. Voilà comment on les utilise:
+La boucle for :</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">print</span><span class="o">(</span><span class="s">'MindDev - Dart for Loop'</span><span class="o">);</span>
+  <span class="k">for</span> <span class="o">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="o">;</span> <span class="n">i</span><span class="o">++)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Une liste est une table et on peut récupérer un élément de la sorte</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">List</span> <span class="n">a</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="mi">2</span><span class="o">,</span><span class="mi">3</span><span class="o">];</span> <span class="c1">//Une list homogène;</span>
+<span class="n">print</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span></code></pre></figure>
+
+<p>L’index de la liste commence de 0 à n-1.</p>
+
+<p>La boucle while :</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">print</span><span class="o">(</span><span class="s">'MindDev - Dart for Loop'</span><span class="o">);</span>
+  <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span>
+  <span class="k">while</span> <span class="o">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="mi">5</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="n">i</span><span class="o">);</span>
+    <span class="n">i</span><span class="o">++;</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>exemple d’une liste hétérogène:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart">  <span class="kd">dynamic</span> <span class="n">a</span> <span class="o">=</span> <span class="o">[</span><span class="mi">1</span><span class="o">,</span><span class="s">"adam"</span><span class="o">,</span><span class="mf">3.14</span><span class="o">];</span> <span class="c1">//Une list hétérogène;</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">a</span><span class="o">[</span><span class="mi">0</span><span class="o">]);</span></code></pre></figure>
+
+<p>La boucle do while :</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span>
+<span class="o">{</span>
+    <span class="kd">var</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+    <span class="kd">var</span> <span class="n">max</span> <span class="o">=</span> <span class="mi">5</span><span class="o">;</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">"MindDev - Dart do while loop"</span><span class="o">);</span>
+    <span class="k">do</span><span class="o">{</span>      
+        <span class="n">print</span><span class="o">(</span><span class="s">"Hello World! Value is :</span><span class="si">${i}</span><span class="s">"</span><span class="o">);</span>  
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">;</span>
+    <span class="o">}</span><span class="k">while</span><span class="o">(</span><span class="n">i</span><span class="o">&lt;=</span><span class="n">max</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Pour accéder à la valeur de i ont procede de la manière suivante ${ i } ou $i, les deux syntaxes sont valides.</p>
+
+<p>forEach</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kd">var</span> <span class="n">list</span> <span class="o">=</span> <span class="o">[</span><span class="s">'apples'</span><span class="o">,</span> <span class="s">'bananas'</span><span class="o">,</span> <span class="s">'oranges'</span><span class="o">];</span><span class="cm">/* équivaut à faire ça List&lt;String&gt; list =  ['apples', 'bananas', 'oranges'];*/</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">forEach</span><span class="o">((</span><span class="n">item</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">'</span><span class="si">${list.indexOf(item)}</span><span class="s">: </span><span class="si">$item</span><span class="s">'</span><span class="o">);</span>
+  <span class="o">});</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>forEach est un itérateur.</p>
+
+<p><strong>Map ou Collection</strong></p>
+
+<p>L’objet Map est une simple paire clé / valeur. Les clés et les valeurs d’une map peuvent être de tout type. Une map est une collection dynamique. En d’autres termes, Maps peut augmenter et diminuer au moment de l’exécution.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart">  <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span> 
+    <span class="kd">var</span> <span class="n">infoUser</span><span class="o">=</span> <span class="o">{</span><span class="s">"name"</span><span class="o">:</span> <span class="s">"adam"</span><span class="o">,</span> <span class="s">'Email'</span><span class="o">:</span> <span class="s">'adammusa2222@gmail.com'</span><span class="o">};</span>
+    <span class="n">print</span><span class="o">(</span><span class="n">infoUser</span><span class="o">[</span><span class="s">"name"</span><span class="o">]);</span> 
+    <span class="n">infoUser</span><span class="o">.</span><span class="na">forEach</span><span class="o">((</span><span class="n">k</span><span class="o">,</span><span class="n">v</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">print</span><span class="o">(</span><span class="s">'</span><span class="si">${k}</span><span class="s">: </span><span class="si">${v}</span><span class="s">'</span><span class="o">));</span> 
+  <span class="o">}</span> </code></pre></figure>
+
+<p><strong>Les fonctions</strong></p>
+
+<p>Il est recommandé de spécifier les types d’arguments de chaque fonction et la valeur de retour.
+Nous allons implementer une suite de fibonacci.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">){</span>
+  <span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="n">fibonacci</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">result</span><span class="o">);</span>
+<span class="o">}</span>
+<span class="kt">int</span> <span class="nf">fibonacci</span><span class="p">(</span><span class="kt">int</span> <span class="n">n</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">if</span> <span class="o">(</span><span class="n">n</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span> <span class="k">return</span> <span class="n">n</span><span class="o">;</span>
+  <span class="k">return</span> <span class="n">fibonacci</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="o">)</span> <span class="o">+</span> <span class="n">fibonacci</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">2</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Fat Arrow Expression ou Lambda Function Expression ou arrow function</strong> est une syntaxe pour écrire une fonction sur une seule ligne en utilisant la =&gt;syntaxe AKA fat arrow. Cela ressemble à la syntaxe de la fonction ES6 Fat Arrow de JavaScript. Il s’agit d’une façon plus propre d’écrire des fonctions avec une seule instruction.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">){</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">result</span><span class="o">(</span><span class="mi">20</span><span class="o">));</span>
+<span class="o">}</span>
+<span class="kd">var</span> <span class="n">result</span> <span class="o">=</span> <span class="o">(</span><span class="n">a</span><span class="o">)</span> <span class="o">=&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">a</span><span class="o">;</span></code></pre></figure>
+
+<p><strong>Quelques methodes que le map et liste qui font en commun</strong></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Propriete &amp; Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Length, : Renvoie la taille de l’objet</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>isEmpty : Renvoie true si l’objet est vide</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>isNotEmpty : Renvoie true si l’objet n’est pas vide</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>add : Permets d’ajouter un element dans l’objet</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>removeAt : Permets de supprimer un element à partir de son index</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>clear : Permets de supprimer l’objet</td>
+    </tr>
+  </tbody>
+</table>
+
+<p><strong>ex :</strong></p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+  <span class="kt">List</span><span class="o">&lt;</span><span class="kd">dynamic</span><span class="o">&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="o">[</span><span class="s">'apples'</span><span class="o">,</span> <span class="s">'bananas'</span><span class="o">,</span> <span class="s">'oranges'</span><span class="o">];</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="mi">2</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">removeAt</span><span class="o">(</span><span class="mi">0</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">length</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">isEmpty</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">list</span><span class="o">.</span><span class="na">isNotEmpty</span><span class="o">);</span>
+  <span class="n">list</span><span class="o">.</span><span class="na">clear</span><span class="o">();</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">list</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Importations</strong></p>
+
+<p>Se font de la maniere suivante :</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart">  <span class="c1">//Importation d'une bibliothèques</span>
+  <span class="kn">import</span> <span class="s">'dart:math'</span><span class="o">;</span>
+  <span class="c1">//Importation de bibliothèques à partir de packages externes</span>
+  <span class="kn">import</span> <span class="s">'package:test/test.dart'</span><span class="o">;</span>
+  <span class="c1">//Importation de fichiers</span>
+  <span class="kn">import</span> <span class="s">'chemin/de/la/fichier.dart'</span><span class="o">;</span></code></pre></figure>
+
+<p><strong>Des classes(POO)</strong></p>
+
+<p>Dans la POO, une classe agit comme un type de données abstrait (TDA) pour une instance de cette classe (objet). En Dart, c’est également le cas. La syntaxe de base d’une classe est:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">NomDeLaClass</span> <span class="o">{</span>
+ <span class="n">champs</span><span class="o">;</span>
+ <span class="n">getters</span><span class="o">/</span><span class="n">setters</span>
+ <span class="n">constructeur</span>
+ <span class="n">methodes</span><span class="o">/</span><span class="n">fonctions</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Getter et Setter</strong></p>
+
+<p>Les getters et setters sont des méthodes spéciales qui fournissent un accès en lecture et en écriture aux propriétés d’un objet. Chaque variable d’instance de votre classe a un getter implicite et un setter si nécessaire. Dans Dart, vous pouvez aller encore plus loin en implémentant vos propres getters et setters. 
+Commençons.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="o">)</span> <span class="o">{</span>
+ <span class="n">Vehicle</span> <span class="n">car</span> <span class="o">=</span> <span class="n">Vehicle</span><span class="o">(</span><span class="nl">marque:</span><span class="s">"Honda"</span><span class="o">,</span><span class="nl">model:</span><span class="s">"Civic"</span><span class="o">,</span><span class="nl">annee:</span><span class="mi">2018</span><span class="o">,</span>    <span class="nl">couleur:</span><span class="s">"red"</span><span class="o">);</span>
+ <span class="n">print</span><span class="o">(</span><span class="n">car</span><span class="o">.</span><span class="na">map</span><span class="o">);</span> <span class="c1">// output - {marque: Honda, model: Civic, annee: 2018, couleur: red}</span>
+<span class="o">}</span>
+<span class="kd">class</span> <span class="nc">Vehicle</span> <span class="o">{</span>
+  <span class="kt">String</span> <span class="n">marque</span><span class="o">;</span>
+  <span class="kt">String</span> <span class="n">model</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">annee</span><span class="o">;</span>
+  <span class="kt">int</span> <span class="n">vehicleAge</span><span class="o">;</span>
+  <span class="kt">String</span> <span class="n">couleur</span><span class="o">;</span>
+  <span class="kt">Map</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">,</span><span class="kd">dynamic</span><span class="o">&gt;</span> <span class="kd">get</span> <span class="n">map</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="o">{</span>
+      <span class="s">"marque"</span><span class="o">:</span> <span class="n">marque</span><span class="o">,</span>
+      <span class="s">"model"</span><span class="o">:</span> <span class="n">model</span><span class="o">,</span>
+      <span class="s">"annee"</span><span class="o">:</span><span class="n">annee</span><span class="o">,</span>
+      <span class="s">"couleur"</span><span class="o">:</span> <span class="n">couleur</span><span class="o">,</span>
+    <span class="o">};</span>
+  <span class="o">}</span>
+
+  <span class="kt">int</span> <span class="kd">get</span> <span class="n">age</span> <span class="o">{</span>
+    <span class="k">return</span> <span class="n">DateTime</span><span class="o">.</span><span class="na">now</span><span class="o">().</span><span class="na">year</span> <span class="o">-</span> <span class="n">annee</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="kt">void</span> <span class="kd">set</span> <span class="n">age</span><span class="o">(</span><span class="kt">int</span> <span class="n">anneecourant</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">vehicleAge</span> <span class="o">=</span> <span class="n">anneecourant</span> <span class="o">-</span> <span class="n">annee</span><span class="o">;</span>
+  <span class="o">}</span>
+
+  <span class="n">Vehicle</span><span class="o">({</span><span class="k">this</span><span class="o">.</span><span class="na">marque</span><span class="o">,</span><span class="k">this</span><span class="o">.</span><span class="na">model</span><span class="o">,</span><span class="k">this</span><span class="o">.</span><span class="na">annee</span><span class="o">,</span><span class="k">this</span><span class="o">.</span><span class="na">couleur</span><span class="o">,});</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Héritage</strong></p>
+
+<p>Dart a un héritage unique.</p>
+
+<p><strong>ex:</strong></p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">extends</span> <span class="n">Spacecraft</span> <span class="o">{</span>
+  <span class="kt">double</span> <span class="n">salaire</span><span class="o">;</span>
+  <span class="n">Employee</span><span class="o">(</span><span class="kt">String</span> <span class="n">nom</span><span class="o">,</span> <span class="kt">String</span> <span class="n">prenom</span><span class="o">,</span> <span class="k">this</span><span class="o">.</span><span class="na">salaire</span><span class="o">)</span>
+      <span class="o">:</span> <span class="k">super</span><span class="o">(</span><span class="n">nom</span><span class="o">,</span> <span class="n">prenom</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Mixins</strong></p>
+
+<p>Les mixins sont un moyen de réutiliser du code dans plusieurs hiérarchies de classes. La classe suivante peut agir comme un mixage:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">Pilote</span> <span class="o">{</span>
+  <span class="kt">int</span> <span class="n">astronaute</span> <span class="o">=</span> <span class="mi">1</span><span class="o">;</span>
+  <span class="kt">void</span> <span class="n">description</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">'Nombre d'</span><span class="nl">astronautes:</span> <span class="n">$astronaute</span><span class="s">');
+  }
+}</span></code></pre></figure>
+
+<p>Pour ajouter les capacités d’un mixin à une classe, étendez simplement la classe avec le mixin.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">extends</span> <span class="n">Person</span> <span class="k">with</span> <span class="n">Pilote</span><span class="o">{</span>
+  <span class="c1">// ···</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Interfaces et classes abstraites</strong></p>
+
+<p>Dart n’a pas de interface comme mot clé. Au lieu de cela, toutes les classes définissent implicitement une interface. Par conséquent, vous pouvez implémenter n’importe quelle classe</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">class</span> <span class="nc">Employee</span> <span class="kd">implements</span> <span class="n">Pilote</span> <span class="o">{</span>
+  <span class="c1">// ···</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Vous pouvez créer une classe abstraite à étendre (ou implémenter) par une classe concrète. Les classes abstraites peuvent contenir des méthodes abstraites (avec des corps vides).</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">Description</span> <span class="o">{</span>
+  <span class="kt">void</span> <span class="n">descrire</span><span class="o">();</span>
+
+  <span class="kt">void</span> <span class="n">descrire</span><span class="o">()</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">'========='</span><span class="o">);</span>
+    <span class="n">descrire</span><span class="o">();</span>
+    <span class="n">print</span><span class="o">(</span><span class="s">'========='</span><span class="o">);</span>
+  <span class="o">}</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Async</strong></p>
+
+<p>Évitez l’enfer de rappel et rendez votre code beaucoup plus lisible en utilisant async et await.</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">const</span> <span class="n">uneSeconde</span> <span class="o">=</span> <span class="n">Duration</span><span class="o">(</span><span class="nl">seconds:</span> <span class="mi">1</span><span class="o">);</span>
+<span class="c1">// ···</span>
+<span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">fonctionasync</span><span class="o">(</span><span class="kt">String</span> <span class="n">message</span><span class="o">)</span> <span class="kd">async</span> <span class="o">{</span>
+  <span class="k">await</span> <span class="n">Future</span><span class="o">.</span><span class="na">delayed</span><span class="o">(</span><span class="n">uneSeconde</span><span class="o">);</span>
+  <span class="n">print</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>La méthode ci-dessus équivaut à:</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="kd">const</span> <span class="n">uneSeconde</span> <span class="o">=</span> <span class="n">Duration</span><span class="o">(</span><span class="nl">seconds:</span> <span class="mi">1</span><span class="o">);</span>
+<span class="c1">// ···</span>
+<span class="n">Future</span><span class="o">&lt;</span><span class="kt">void</span><span class="o">&gt;</span> <span class="n">fonctionasync</span><span class="o">(</span><span class="kt">String</span> <span class="n">message</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">return</span> <span class="n">Future</span><span class="o">.</span><span class="na">delayed</span><span class="o">(</span><span class="n">uneSeconde</span><span class="o">).</span><span class="na">then</span><span class="o">((</span><span class="n">_</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">print</span><span class="o">(</span><span class="n">message</span><span class="o">);</span>
+  <span class="o">});</span>
+<span class="o">}</span></code></pre></figure>
+
+<p><strong>Exceptions</strong></p>
+
+<p>Pour déclencher une exception, utilisez throw</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="k">if</span> <span class="o">(</span><span class="n">astronaute</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">throw</span> <span class="n">StateError</span><span class="o">(</span><span class="s">"N'est pas un astronaute."</span><span class="o">);</span>
+<span class="o">}</span></code></pre></figure>
+
+<p>Pour intercepter une exception, utilisez une try instruction avec on ou catch(ou les deux):</p>
+
+<figure class="highlight"><pre><code class="language-dart" data-lang="dart"><span class="n">main</span><span class="o">()</span> <span class="o">{</span> 
+   <span class="kt">int</span> <span class="n">x</span> <span class="o">=</span> <span class="mi">12</span><span class="o">;</span> 
+   <span class="kt">int</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> 
+   <span class="kt">int</span> <span class="n">res</span><span class="o">;</span>  
+   
+   <span class="k">try</span> <span class="o">{</span> 
+      <span class="n">res</span> <span class="o">=</span> <span class="n">x</span> <span class="o">~/</span> <span class="n">y</span><span class="o">;</span> 
+   <span class="o">}</span>  
+   <span class="kd">on</span> <span class="n">IntegerDivisionByZeroException</span> <span class="k">catch</span><span class="o">(</span><span class="n">e</span><span class="o">)</span> <span class="o">{</span> 
+      <span class="n">print</span><span class="o">(</span><span class="n">e</span><span class="o">);</span> <span class="c1">//on affiche l'exception</span>
+   <span class="o">}</span> 
+<span class="o">}</span> </code></pre></figure>
+
+<p><strong>Conclusion:</strong></p>
+
+<p><strong>Bravo !!!</strong>, vous disposez déjà la base nécessaire pour ne pas se perdre en flutter bien qu’on a brossé le tour de Dart mais si vous souhaitez approfondir votre base en Dart <a href="https://dart.dev/guides/language/language-tour/"><strong>clique ici</strong></a></p>
+
+  </div>
+
+  <p class="post-meta"><time class="dt-published" datetime="" itemprop="datePublished">
+        
+      </time></p>
+  
+  <a class="u-url" href="/tour/langage/dart" hidden></a>
+</article>
+
+
+
+  <div class="comments"> <!--this is to load disqus comments-->
+ <div id="disqus_thread"></div>
+ <script>
+     /**
+      *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+     /*
+     var disqus_config = function () {
+     this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+     this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+     };
+     */
+     (function () { // DON'T EDIT BELOW THIS LINE
+         var d = document,
+             s = d.createElement('script');
+         s.src = 'https://flutterblogys.disqus.com/embed.js';
+         s.setAttribute('data-timestamp', +new Date());
+         (d.head || d.body).appendChild(s);
+     })();
+ </script>
+ <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+         Disqus.</a></noscript>
+<script src="https://flutterblogys.disqus.com/embed.js"></script>
+ <!-- this is for count comment with disqus-->
+ <script id="dsq-count-scr" src="//flutterblogys.disqus.com/count.js" async></script>
+  </div>
+
+
+
+
+        </div>
+    </main><footer class="site-footer h-card">
+    <data class="u-url" href="/"></data>
+
+    <div class="wrapper">
+
+        <div class="footer">
+            <div class="footer-title">2022 &copy; thecodebrute</div>
+
+            <div class="footer-social-links">
+                Vous pouvez me suivre    
+                <a target="_blank" rel="me" href="https://github.com/AdamMusa">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>GitHub icon</title><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+                </a>
+                <a target="_blank" rel="me" href="https://twitter.com/AdamMusaAly/">
+                    <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Twitter icon</title><path d="M23.954 4.569c-.885.389-1.83.654-2.825.775 1.014-.611 1.794-1.574 2.163-2.723-.951.555-2.005.959-3.127 1.184-.896-.959-2.173-1.559-3.591-1.559-2.717 0-4.92 2.203-4.92 4.917 0 .39.045.765.127 1.124C7.691 8.094 4.066 6.13 1.64 3.161c-.427.722-.666 1.561-.666 2.475 0 1.71.87 3.213 2.188 4.096-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63.961-.689 1.8-1.56 2.46-2.548l-.047-.02z"/></svg>
+                    </a>
+            </div>
+        </div>
+    </div>
+
+</footer></body>
+
+</html>
